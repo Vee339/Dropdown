@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dropdown menu</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section>
+		<div class="bg"></div>
+	
+	<select id="select-state" onchange="changeBackground(this)">
+		<option value="pics/goa2.jpg">Goa</option>
+		<option value="pics/himachal-pradesh2.jpg">Himachal Pradesh</option>
+		<option value="pics/kashmir2.jpg">Jammu & Kashmir</option>
+		<option value="pics/kerala2.jpg">Kerala</option>
+		<option value="pics/golden-temple2.jpg">Punjab</option>
+		<option value="pics/rajasthan2.jpg">Rajasthan</option>
+	</select>
+	</section>
+       <script type="text/javascript">
+       	function changeBackground(getbg){
+       		let bg = document.querySelector(".bg");
+       		let pic = getbg.value;
+
+       		console.log(pic);
+            bg.style.background = 'url('+pic+')';
+            bg.style.backgroundSize = "cover";
+            bg.style.backgroundPosition = "center";
+
+       	}
+
+       </script>
+</body>
+</html>
